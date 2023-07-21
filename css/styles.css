@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat Alternates', sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  align-items: center;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  padding: 50px;
+  text-align: center;
+}
+
+#toggleButton {
+  background-color:#05547f ;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  left: 10%;
+  padding: 10px 20px;
+  position: absolute;
+  text-align: center;
+
+}
+
+#calc {
+  background-color: black;
+  border-radius: 15px;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  width: 500px;
+
+}
+
+#calc h3 {
+  color: #666;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+#operations {
+  text-align: right;
+}
+
+#previous-operation {
+  color: #777;
+  min-height: 1.6em;
+  overflow-wrap: break-word;
+  padding: 0.2em;
+}
+
+#current-operation {
+  font-size: 3em;
+  font-weight: 700;
+  min-height: 1.6em;
+  overflow-wrap: break-word;
+  padding: 0.2em;
+}
+
+#buttons-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3px;
+  
+  
+}
+
+#buttons-container button {
+  background-color: #3190b8b5;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 1.2em;
+  height: 4em;
+}
+
+#buttons-container .number {
+  background-color: #3190b8b5;
+}
+
+#buttons-container button:hover {
+  background-color: #05547f;
+}
+
+#buttons-container #equal-btn {
+  background-color: #da7a46;
+  grid-column: span 2;
+}
+
+#buttons-container #equal-btn:hover {
+  background-color: #e7550c;
+  grid-column: span 2;
+}
+
+
+
+@media (max-width: 768px) {
+ 
+  body {
+    font-size: 20px; 
+    padding: 20px; 
+  }
+
+  #toggleButton {
+    font-size: 18px; 
+    padding: 10px 20px; 
+    bottom: 18%;
+    left: auto;
+  }
+
+  #calc {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #buttons-container {
+    margin-top: 20px;
+    gap: 3px; 
+  }
+
+  #buttons-container button {
+    font-size: 1.2em; 
+    height: 4em;
+  }
+
+  #buttons-container #equal-btn {
+    grid-column: span 2; 
+  }
+}
+
+
+@media (max-width: 375px) {
+  body {
+    font-size: 18px; 
+    padding: 10px; 
+  }
+
+  #toggleButton {
+    font-size: 16px; 
+    padding: 8px 16px; 
+    bottom: 45%;
+  }
+
+  #calc {
+    width: 100%; 
+    max-width: 100%; 
+  }
+
+  #buttons-container {
+    margin-top: 10px; 
+    gap: 2px; 
+  }
+
+  #buttons-container button {
+    font-size: 1em; 
+    height: 3em; 
+  }
+
+  #buttons-container #equal-btn {
+    grid-column: span 2; 
+  }
+}
